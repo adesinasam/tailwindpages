@@ -49,6 +49,12 @@ app_license = "mit"
 # 	"Role": "home_page"
 # }
 
+website_route_rules = [
+    {"from_route": "/students/profile/<docname>", "to_route": "students/profile"},
+    {"from_route": "/students/billing/<docname>", "to_route": "students/billing"},
+    {"from_route": "/students/ledger/<docname>", "to_route": "students/ledger"}
+]
+
 # Generators
 # ----------
 
@@ -122,6 +128,13 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
+# doc_events = {
+#     "*": {
+#         "after_insert": [
+#             "tailwindpages.api.process_selected_values"
+#         ]
+#     }
+# }
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
